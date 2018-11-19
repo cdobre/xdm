@@ -1,0 +1,37 @@
+{
+  "meta:license": [
+    "Copyright 2018 Adobe Systems Incorporated. All rights reserved.",
+    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "$id":
+    "https://ns.adobe.com/experience/primetime/browserdetails",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Browser details extensions for Adobe Primetime Authentication",
+  "type": "object",
+  "meta:extends": ["https://ns.adobe.com/xdm/context/browserdetails"],
+  "description":
+    "Browser details extension properties specific to Adobe Primetime Authentication.",
+  "definitions": {
+    "browserdetails": {
+      "properties": {
+        "xdm:originalUserAgent": {
+          "title": "Original User Agent",
+          "type": "string",
+          "description":
+            "The original HTTP User-Agent string from the client request."
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/browserdetails"
+    },
+    {
+      "$ref": "https://ns.adobe.com/xdm/context/browserdetails"
+    }
+  ],
+  "meta:status": "experimental"
+}

@@ -1,0 +1,8 @@
+{
+  "xdm:name": "Chrome",
+  "xdm:vendor": "Google",
+  "xdm:version": "70.0.3538.77",
+  "xdm:userAgent": "Chrome/70.0.3538.77",
+  "xdm:originalUserAgent":
+    "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
+}

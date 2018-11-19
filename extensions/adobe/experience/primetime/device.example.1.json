@@ -1,0 +1,12 @@
+{
+  "xdm:type": "mobile",
+  "xdm:modelNumber": "G011C",
+  "xdm:manufacturer": "LG",
+  "xdm:vendor": "Google",
+  "xdm:hardwareModel": "G011C",
+  "xdm:screenHeight": 2880,
+  "xdm:screenWidth": 1440,
+  "xdm:screenPPI" : 537,
+  "xdm:screenDiagonalSize" : "6",
+  "xdm:colorDepth": 16777216
+}
