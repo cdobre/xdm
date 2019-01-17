@@ -1,0 +1,21 @@
+{
+  "xdm:idp" : "Comcast",
+  "xdm:technologyProvider" : "Comcast",
+  "xdm:broker": "Adobe",
+  "xdm:authorizationType" : "non-authoritative",
+  "xdm:resources" : [
+    {
+      "xdm:channel": "CNN",
+      "xdm:authorized": true
+    },
+    {
+      "xdm:channel": "TBS",
+      "xdm:authorized": true
+    },
+    {
+      "xdm:channel": "TCM",
+      "xdm:authorized": false
+    }
+  ],
+  "xdm:latency": 5300
+}

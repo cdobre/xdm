@@ -1,0 +1,53 @@
+{
+  "meta:license": [
+    "Copyright 2018 Adobe Systems Incorporated. All rights reserved.",
+    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "$id": "https://ns.adobe.com/experience/primetime/device",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Device extensions for Adobe Primetime Authentication",
+  "type": "object",
+  "meta:extends": ["https://ns.adobe.com/xdm/context/device"],
+  "description": "Device extension properties specific to Adobe Primetime Authentication.",
+  "definitions": {
+    "device": {
+      "properties": {
+        "xdm:vendor": {
+          "title": "Device vendor",
+          "type": "string",
+          "description":
+          "The company/organisation that provides a device, browser or other component to the market."
+        },
+        "xdm:hardwareModel": {
+          "title": "Device hardware model",
+          "type": "string",
+          "description":
+          "The hardware model name of a device, browser or some other component."
+        },
+        "xdm:screenPPI": {
+          "title": "Screen PPI",
+          "type": "integer",
+          "description":
+            "The ppi of the display."
+        },
+        "xdm:screenDiagonalSize": {
+          "title": "Screen Diagonal Size",
+          "type": "string",
+          "description":
+            "The display diagonal size in inches."
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/device"
+    },
+    {
+      "$ref": "https://ns.adobe.com/xdm/context/device"
+    }
+  ],
+  "meta:status": "experimental"
+}

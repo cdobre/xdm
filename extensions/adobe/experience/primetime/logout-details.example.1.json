@@ -1,0 +1,6 @@
+{
+  "xdm:idp" : "Verizon",
+  "xdm:technologyProvider" : "Verizon",
+  "xdm:broker": "Adobe",
+  "xdm:logoutType" : "idpInitiated"
+}

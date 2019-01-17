@@ -1,0 +1,75 @@
+{
+  "meta:license": [
+    "Copyright 2018 Adobe Systems Incorporated. All rights reserved.",
+    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "$id":   "https://ns.adobe.com/experience/primetime/authentication-details",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Authentication details",
+  "type": "object",
+  "description":
+    "Authentication details properties specific to Adobe Primetime Authentication flows.",
+  "definitions": {
+    "authentication": {
+      "properties": {
+        "xdm:idp": {
+          "title": "MVPD Identifier",
+          "type": "string",
+          "description":
+            "The MVPD with whom the end user is authenticated or tries to authenticate"
+        },
+        "xdm:technologyProvider": {
+          "title": "Technology Provider",
+          "type": "string",
+          "description":
+            "The partner which provides the infrastructure for IdP authentication endpoints"
+        },
+        "xdm:broker": {
+          "title": "Authentication Broker",
+          "type": "string",
+          "description":
+            "External authentication provider which might intermediate the authentication flow"
+        },
+        "xdm:authenticationType": {
+          "title" : "Authentication Type",
+          "type": "string",
+          "description": "The SSO type",
+          "meta:enum": {
+            "regular" : "The normal authentication flow",
+            "passive" : "Passive authentication method reusing the same user agent",
+            "idpInitiated" : "The authentication flow was initiated by the Idp"
+          }
+        },
+        "xdm:relayState": {
+          "title": "Relay State",
+          "type": "string",
+          "description":
+            "Relay state information used during authentication flow"
+        },
+        "xdm:timeToLive": {
+          "title": "Time To Live",
+          "type": "integer",
+          "description":
+            "Authentication token time to live in seconds."
+        },
+        "xdm:failReason": {
+          "title" : "Fail Reason",
+          "type": "string",
+          "description": "The reason for failed authentication",
+          "meta:enum": {
+              "rejected" : "The authentication was rejected",
+              "unsupported" : "The authentication method is not supported"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/authentication"
+    }
+  ],
+  "meta:status": "experimental"
+}

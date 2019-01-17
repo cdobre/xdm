@@ -1,0 +1,82 @@
+{
+  "xdm:timestamp": "2017-09-26T15:52:25+00:00",
+  "xdm:endUserIDs": {
+    "https://ns.adobe.com/experience/mvpdId": {
+      "xdm:id": "94b73203-014d-499a-9b9d-ccc2eec2bfe8",
+      "xdm:namespace": {
+        "@id": "https://ns.adobe.com/experience/primetime/mvpd/Comcast",
+        "xdm:code": "Comcast"
+      }
+    },
+    "https://ns.adobe.com/experience/deviceId": {
+      "xdm:id": "mxqHcrhBgGPINnk6AgfE9QS0BnpiIJ23NjhfUwX1n1Xpr0JomzZHFr7fKzyDJBGg6G97wfsMZCbrLy8KLP5D6aOzu3cDPeIDgNnX",
+      "xdm:namespace": {
+        "@id": "https://ns.adobe.com/experience/primetime/device/Adobe",
+        "xdm:code": "Adobe"
+      }
+    }
+  },
+  "https://ns.adobe.com/experience/primetime/eventType" : "authenticationGranted",
+  "https://ns.adobe.com/experience/primetime/ssoType" : "passive",
+  "https://ns.adobe.com/experience/primetime/authenticationDetails" : {
+    "xdm:idp" : "Comcast",
+    "xdm:technologyProvider" : "Comcast",
+    "xdm:relayState" : "45TPG",
+    "xdm:broker": "Adobe",
+    "xdm:timeToLive" : 259200,
+    "xdm:authenticationType" : "passive"
+  },
+  "xdm:environment": {
+    "xdm:type": "browser",
+    "xdm:browserDetails": {
+      "xdm:name": "Android Browser",
+      "xdm:vendor": "Google",
+      "xdm:version": "58.0.3029.125",
+      "xdm:userAgent":
+        "Mozilla/5.0 (Linux; Android 8.0.0; Pixel 2 XL Build/OPD1.170816.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.125 Mobile Safari/537.36",
+      "xdm:originalUserAgent":
+        "Mozilla/5.0 (Linux; Android 8.0.0; Pixel 2 XL Build/OPD1.170816.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.125 Mobile Safari/537.36"
+    },
+    "xdm:operatingSystem": "Android",
+    "xdm:operatingSystemFamily": "Android",
+    "xdm:operatingSystemVersion": "8.0",
+    "xdm:operatingSystemVendor": "Google",
+    "xdm:viewportHeight": 823,
+    "xdm:viewportWidth": 412,
+    "xdm:connectionType": "wifi",
+    "xdm:ipV4": "101.102.103.104",
+    "xdm:ipV4Anonymized": "101.102.103.100"
+  },
+  "xdm:device": {
+    "xdm:type": "mobile",
+    "xdm:modelNumber": "G011C",
+    "xdm:manufacturer": "LG",
+    "xdm:vendor": "Google",
+    "xdm:hardwareModel": "G011C",
+    "xdm:screenHeight": 2880,
+    "xdm:screenWidth": 1440,
+    "xdm:screenPPI" : 537,
+    "xdm:screenDiagonalSize" : "6",
+    "xdm:colorDepth": 16777216
+  },
+  "adm:application" : {
+    "xdm:id": "A123",
+    "xdm:name": "CNN Android",
+    "xdm:version": "1.0.1",
+    "xdm:clientAPIVersion" : "2.4.1",
+    "xdm:serverAPIVersion" : "3.0",
+    "xdm:serviceProvider" : "CNN"
+  },
+  "https://ns.adobe.com/experience/primetime/enduser-metadata": {
+    "xdm:entries" : [
+      {
+        "xdm:key" : "upsid",
+        "xdm:value" : "AQICi2beoJu07syR9xJRvCcxTAeIXtgSwOlHFp%2FjebxOTJFdAxqShqIUPO%2Btcc4APj8%2Fgecye81hZQU%3D"
+      },
+      {
+        "xdm:key" : "postalCode",
+        "xdm:value" : "43017"
+      }
+    ]
+  }
+}

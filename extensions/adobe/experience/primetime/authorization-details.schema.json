@@ -1,0 +1,113 @@
+{
+  "meta:license": [
+    "Copyright 2018 Adobe Systems Incorporated. All rights reserved.",
+    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "$id":   "https://ns.adobe.com/experience/primetime/authorization-details",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Authorization details",
+  "type": "object",
+  "description":
+    "Authorization details properties specific to Adobe Primetime Authentication flows.",
+  "definitions": {
+    "resource": {
+      "$id": "https://ns.adobe.com/experience/primetime/authorization-details/resource",
+      "title": "Resource",
+      "description":
+        "A representation of the media resource the end user wants to access.",
+      "properties": {
+        "xdm:channel": {
+          "title": "Resource channel",
+          "description": "The resource channel",
+          "type": "string"
+        },
+        "xdm:raw": {
+          "title": "Raw resource",
+          "description": "The raw representation of the resource",
+          "type": "string"
+        },
+        "xdm:authorized" : {
+          "title" : "Authorization status",
+          "description": "Authorization decision for each resource",
+          "type": "boolean"
+        }
+      },
+      "required": ["xdm:channel", "xdm:authorized"]
+    },
+    "authorization": {
+      "properties": {
+        "xdm:idp": {
+          "title": "MVPD Identifier",
+          "type": "string",
+          "description":
+            "The MVPD with whom the end user is authorized or tries to authorize"
+        },
+        "xdm:technologyProvider": {
+          "title": "Technology Provider",
+          "type": "string",
+          "description":
+            "The partner which provides the infrastructure for IdP authorization endpoints"
+        },
+        "xdm:broker": {
+          "title": "Authorization Broker",
+          "type": "string",
+          "description":
+            "External authorization provider which might intermediate the authorization flow"
+        },
+        "xdm:authorizationType": {
+          "title" : "Authorization Type",
+          "type": "string",
+          "description": "The authorization type",
+          "meta:enum": {
+            "authoritative" : "The flow through which the end user obtains an authoritative authorization decision.",
+            "non-authoritative" : "The flow through which the end user obtains a non-authoritative authorization decision useful for initial content filtering"
+          }
+        },
+        "xdm:resources" : {
+          "title": "Resources",
+          "type": "array",
+          "description": "The list resources for which the user request authorization",
+          "$ref": "#/definitions/resource"
+        },
+        "xdm:timeToLive": {
+          "title": "Time To Live",
+          "type": "integer",
+          "description":
+            "Authorization token time to live in seconds."
+        },
+        "xdm:latency": {
+          "title": "Request latency",
+          "type": "integer",
+          "description":
+            "The time the authorization network calls takes to return back to adobe pass services in milliseconds."
+        },
+        "xdm:failReason": {
+          "title" : "Fail Reason",
+          "type": "string",
+          "description": "The reason for failed authorization",
+          "meta:enum": {
+            "no-authz": "User is not authorized or invalid subscriber",
+            "degradation-authz": "User is not authorized for the specified resource due to an programmer denied rule being in place",
+            "fraud": "Possible fraud attempt detected",
+            "network": "A network error occurred when communicating with the provider's authorization service",
+            "invalid-request": "Invalid request, missing or invalid parameters",
+            "invalid-refresh-token": "The OAuth2 refresh token is missing or invalid",
+            "invalid-authz-request": "There was an error when reading the authorization request",
+            "invalid-preflight-request": "The preflight request could not be build.",
+            "invalid-authz-request-degradation": "Authorization fails when trying to obtain authorization with an AuthNAll token for a different requestor than the one for which the authentication token was issued",
+            "mismatch-device": "There was a device id mismatch between the authentication token and client information",
+            "max-resource-exceeded": "Maximum preflight resources number exceeded"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/authorization"
+    }
+  ],
+  "meta:status": "experimental"
+}

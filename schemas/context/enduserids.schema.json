@@ -55,6 +55,16 @@
           "title": "Phone Number IDs",
           "$ref": "https://ns.adobe.com/xdm/context/identity",
           "description": "Phone numbers used as IDs."
+        },
+        "https://ns.adobe.com/experience/mvpdId": {
+          "title": "Adobe Primetime Authentication MVPD ID",
+          "$ref": "https://ns.adobe.com/xdm/context/identity",
+          "description": "Adobe Primetime Authentication extension to End User IDs."
+        },
+        "https://ns.adobe.com/experience/deviceId": {
+          "title": "Adobe Primetime Authentication Device ID",
+          "$ref": "https://ns.adobe.com/xdm/context/identity",
+          "description": "Adobe Primetime Authentication extension to End User IDs."
         }
       },
       "patternProperties": {

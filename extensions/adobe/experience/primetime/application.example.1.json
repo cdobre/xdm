@@ -1,0 +1,8 @@
+{
+  "xdm:id": "A123",
+  "xdm:name": "CNN Android",
+  "xdm:version": "1.0.1",
+  "xdm:serviceProvider" : "CNN",
+  "xdm:deviceType" : "android_tv",
+  "xdm:normalizedDeviceType": "android"
+}

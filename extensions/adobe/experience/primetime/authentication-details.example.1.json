@@ -1,0 +1,7 @@
+{
+  "xdm:idp" : "Comcast",
+  "xdm:technologyProvider" : "Comcast",
+  "xdm:relayState" : "VTD56U",
+  "xdm:broker": "Adobe",
+  "xdm:timeToLive" : 259200
+}

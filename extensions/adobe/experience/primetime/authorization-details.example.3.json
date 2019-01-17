@@ -1,0 +1,14 @@
+{
+  "xdm:idp" : "Mediacom",
+  "xdm:technologyProvider" : "Synacor",
+  "xdm:broker": "Adobe",
+  "xdm:authorizationType" : "authoritative",
+  "xdm:resources" : [
+    {
+      "xdm:channel": "CNN",
+      "xdm:authorized": false
+    }
+  ],
+  "xdm:latency": 1500,
+  "xmd:failReason" : "no-authz"
+}

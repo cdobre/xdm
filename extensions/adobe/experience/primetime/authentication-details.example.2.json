@@ -1,0 +1,8 @@
+{
+  "xdm:idp" : "Mediacom",
+  "xdm:technologyProvider" : "Synacor",
+  "xdm:relayState" : "45TPG",
+  "xdm:broker": "Adobe",
+  "xdm:authenticationType" : "passive",
+  "xdm:failedReason" : "unsupported"
+}
